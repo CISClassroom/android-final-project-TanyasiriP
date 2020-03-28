@@ -4,8 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginLeft="20dp"
-    android:layout_marginRight="20dp"
     android:background="@drawable/wpandroid"
     android:orientation="vertical"
     tools:context=".HomeActivity">
@@ -18,6 +16,8 @@
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
         android:gravity="right"
         android:text="เข้าสู่ระบบด้วยบัญชี : "
         android:textColor="#000000"
@@ -27,6 +27,8 @@
         android:id="@+id/user_email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
         android:gravity="right"
         android:textColor="#000000"
         android:textSize="15dp" />
@@ -39,6 +41,8 @@
         android:id="@+id/return_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
         android:text="เครื่องดนตรีที่คืนแล้ว"
         android:background="#C7CEEA" />
 
@@ -50,6 +54,8 @@
         android:id="@+id/no_return_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
         android:text="เครื่องดนตรีที่ยังไม่คืน"
         android:background="#B5EAD7" />
 
@@ -61,6 +67,8 @@
         android:id="@+id/show_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
         android:text="เครื่องดนตรีทั้งหมด"
         android:background="#E2F0CB" />
 
@@ -72,6 +80,8 @@
         android:id="@+id/add_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
         android:text="เพิ่มเครื่องดนตรี"
         android:background="#FFDAC1" />
 
@@ -83,6 +93,8 @@
         android:id="@+id/signout_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
         android:text="ออกจากระบบ"
         android:background="#FF9AA2"/>
 </LinearLayout>

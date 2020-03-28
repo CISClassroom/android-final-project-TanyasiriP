@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">FinalProjectApplication</string>
+    <string-array name="type">
+        <item>เครื่องสาย -ดีด-</item>
+        <item>เครื่องสาย -สี-</item>
+        <item>เครื่องตี</item>
+        <item>เครื่องเป่า</item>
+    </string-array>
 </resources>

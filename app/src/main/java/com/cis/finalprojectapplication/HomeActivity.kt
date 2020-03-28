@@ -31,7 +31,7 @@ class HomeActivity : AppCompatActivity() {
         }
 
         return_button.setOnClickListener{
-            //startActivity(Intent(this@HomeActivity,RetuenActivity::class.java))
+            //startActivity(Intent(this@HomeActivity,ReturnActivity::class.java))
             Toast.makeText(this,"เครื่องดนตรีที่คืนแล้ว", Toast.LENGTH_SHORT).show()
         }
 
@@ -46,7 +46,7 @@ class HomeActivity : AppCompatActivity() {
         }
 
         add_button.setOnClickListener{
-            //startActivity(Intent(this@HomeActivity,AddActivity::class.java))
+            startActivity(Intent(this@HomeActivity,AddInstruActivity::class.java))
             Toast.makeText(this,"เพิ่มเครื่องดนตรี",Toast.LENGTH_SHORT).show()
         }
 
