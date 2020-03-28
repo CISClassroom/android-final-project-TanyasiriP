@@ -30,20 +30,20 @@ class ToDoItemAdapter(context: Context, toDoItemList: MutableList<ToDo>) : BaseA
         val name: String = itemList.get(position).name as String
 
         val view: View
-        val vh: ListRowHolder
+//        val vh: ListRowHolder
 
         // get list view
         if (convertView == null) {
             view = mInflater.inflate(R.layout.activity_show, parent, false)
-            vh = ListRowHolder(view)
-            view.tag = vh
+//            vh = ListRowHolder(view)
+//            view.tag = vh
         } else {
             view = convertView
-            vh = view.tag as ListRowHolder
+//            vh = view.tag as ListRowHolder
         }
 
         // add text to view
-        vh.label.text = name
+//        vh.label.text = name
 
         //add button listenner
 
@@ -62,7 +62,7 @@ class ToDoItemAdapter(context: Context, toDoItemList: MutableList<ToDo>) : BaseA
         return itemList.size
     }
 
-    private class ListRowHolder(row: View?) {
-        val label: TextView = row!!.findViewById<TextView>(R.id.show_textview) as TextView
-    }
+//    private class ListRowHolder(row: View?) {
+//        val label: TextView = row!!.findViewById<TextView>(R.id.show_textview) as TextView
+//    }
 }

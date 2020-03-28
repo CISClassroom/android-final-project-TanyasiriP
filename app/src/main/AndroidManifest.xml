@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".AddInstruActivity"></activity>
+        <activity android:name=".ShowDetailActivity"></activity>
+        <activity android:name=".AddInstruActivity" />
         <activity android:name=".ShowActivity" />
         <activity android:name=".ReturnActivity" />
         <activity android:name=".HomeActivity" />

@@ -7,7 +7,7 @@
     tools:context=".ShowActivity">
 
     <ListView
-        android:id="@+id/show_textview"
+        android:id="@+id/show_listview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginLeft="20dp"
