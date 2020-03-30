@@ -74,14 +74,14 @@ class AddInstruActivity : AppCompatActivity() {
             return
         }
 
-        val ref = FirebaseDatabase.getInstance().getReference("instrument")
+        val ref = FirebaseDatabase.getInstance().getReference("instruments")
 
         val instrumentId = ref.push().key
 
-        val events_student = instrumentId?.let { Instrument(it,instrumentName, instrumentDetail,instrumentType)}
+        val select_instrument = instrumentId?.let { Instrument(it,instrumentName, instrumentDetail,instrumentType)}
 
         if (instrumentId != null) {
-            ref.child(instrumentId).setValue(events_student).addOnCompleteListener {
+            ref.child(instrumentId).setValue(select_instrument).addOnCompleteListener {
                 Toast.makeText(applicationContext,"บันทึกเครื่องดนตรีแล้ว", Toast.LENGTH_SHORT).show()
             }
         }

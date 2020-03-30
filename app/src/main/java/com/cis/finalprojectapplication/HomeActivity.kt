@@ -41,7 +41,7 @@ class HomeActivity : AppCompatActivity() {
         }
 
         show_button.setOnClickListener{
-            startActivity(Intent(this@HomeActivity,ShowActivity::class.java))
+            startActivity(Intent(this@HomeActivity,ShowAllActivity::class.java))
             Toast.makeText(this,"เครื่องดนตรีทั้งหมด",Toast.LENGTH_SHORT).show()
         }
 

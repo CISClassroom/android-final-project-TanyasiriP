@@ -3,14 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@drawable/wpandroid"
     android:layout_height="match_parent"
-    tools:context=".ShowActivity">
+    tools:context=".ShowAllActivity">
 
     <ListView
-        android:id="@+id/show_listview"
+        android:id="@+id/show_all_listview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp" />
-
+        android:layout_margin="20dp" />
 </LinearLayout>
