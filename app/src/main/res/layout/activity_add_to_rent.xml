@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/wpandroid"
+    tools:context=".AddToRentActivity">
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="30dp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:textColor="#000000"
+        android:text="กรุณาเลือกเครื่องดนตรีที่ต้องการยืม" />
+
+    <Spinner
+        android:id="@+id/select_instrument_spinner"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:textColor="#000000"
+        android:layout_height="50dp" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="20dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/selected_instrument"
+        android:layout_width="match_parent"
+        android:layout_height="260dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="#FFDDDD"
+        android:textColor="#000000">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="30dp" />
+
+    <Button
+        android:id="@+id/save_rent_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="#B5EAD7"
+        android:textColor="#000000"
+        android:text="Button" />
+</LinearLayout>

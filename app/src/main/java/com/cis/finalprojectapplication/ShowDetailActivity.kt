@@ -22,7 +22,7 @@ class ShowDetailActivity : AppCompatActivity() {
 
         add_rent_button.setOnClickListener {
             val intent = Intent(this@ShowDetailActivity,HomeActivity::class.java)
-            Toast.makeText(this,"เพิ่มรายชื่อนักศึกษาสำหรับกิจกรรมนี้", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this,"เพิ่มเครื่องดนตรีนี้ในการยืมแล้ว", Toast.LENGTH_SHORT).show()
             startActivity(intent)
         }
     }

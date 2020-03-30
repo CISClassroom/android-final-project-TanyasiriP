@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.cis.finalprojectapplication" >
+    package="com.cis.finalprojectapplication">
 
     <application
         android:allowBackup="true"
@@ -8,9 +8,10 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme" >
-        <activity android:name=".RentListActivity" >
-        </activity>
+        android:theme="@style/AppTheme">
+        <activity android:name=".InstrumentListActivity"></activity>
+        <activity android:name=".AddToRentActivity" />
+        <activity android:name=".RentListActivity" />
         <activity android:name=".AddToUnReturnActivity" />
         <activity android:name=".ShowAllActivity" />
         <activity android:name=".ShowDetailActivity" />
@@ -18,7 +19,7 @@
         <activity android:name=".ShowActivity" />
         <activity android:name=".ReturnActivity" />
         <activity android:name=".HomeActivity" />
-        <activity android:name=".MainActivity" >
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
