@@ -19,11 +19,17 @@ class ShowDetailActivity : AppCompatActivity() {
 
         mDatabase = FirebaseDatabase.getInstance().reference
         mDatabase.orderByKey().addListenerForSingleValueEvent(itemListener)
-
-        add_rent_button.setOnClickListener {
-            val intent = Intent(this@ShowDetailActivity,HomeActivity::class.java)
+        var id = getIntent().getExtras()!!.getString("id")
+        edit_button.setOnClickListener {
+            val intent = Intent(this@ShowDetailActivity,AddInstruActivity::class.java)
             Toast.makeText(this,"เพิ่มเครื่องดนตรีนี้ในการยืมแล้ว", Toast.LENGTH_SHORT).show()
             startActivity(intent)
+        }
+        delete_button.setOnClickListener {
+            mDatabase.child("instruments").child(id!!).removeValue()
+            val intent = Intent(this,ShowAllActivity::class.java)
+            startActivity(intent)
+            finish()
         }
     }
     var itemListener: ValueEventListener = object : ValueEventListener {

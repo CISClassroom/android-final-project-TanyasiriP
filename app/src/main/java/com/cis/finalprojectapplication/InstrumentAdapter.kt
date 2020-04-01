@@ -9,60 +9,50 @@ import android.widget.*
 class InstrumentAdapter(val mCtx: Context,val layoutShowId:Int,val instrlist:List<Instrument>)
     :ArrayAdapter<Instrument>(mCtx,layoutShowId,instrlist) {
 
-//    override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
-//       //return super.getView(position, convertView, parent)
-////
-////        val layoutInflater: LayoutInflater = LayoutInflater.from(mCtx)
-////        val view: View = layoutInflater.inflate(layoutResId,null)
-////        var student: Event = eventlist[position]
-////        return  view
-//    }
-}
+    class ToDoItemAdapter(context: Context, toDoItemList: MutableList<ToDo>) : BaseAdapter() {
 
+        private val mInflater: LayoutInflater = LayoutInflater.from(context)
+        private var itemList = toDoItemList
 
-class ToDoItemAdapter(context: Context, toDoItemList: MutableList<ToDo>) : BaseAdapter() {
+        override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
+            // create object from view
+            val name: String = itemList.get(position).name as String
 
-    private val mInflater: LayoutInflater = LayoutInflater.from(context)
-    private var itemList = toDoItemList
+            val view: View
+            val vh: ListRowHolder
 
-    override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
-        // create object from view
-        val name: String = itemList.get(position).name as String
+            // get list view
+            if (convertView == null) {
+                view = mInflater.inflate(R.layout.item_instrument, parent, false)
+                vh = ListRowHolder(view)
+                view.tag = vh
+            } else {
+                view = convertView
+                vh = view.tag as ListRowHolder
+            }
 
-        val view: View
-        val vh: ListRowHolder
+            // add text to view
+            vh.label.text = name
 
-        // get list view
-        if (convertView == null) {
-            view = mInflater.inflate(R.layout.item_instrument, parent, false)
-            vh = ListRowHolder(view)
-            view.tag = vh
-        } else {
-            view = convertView
-            vh = view.tag as ListRowHolder
+            //add button listenner
+
+            return view
         }
 
-        // add text to view
-        vh.label.text = name
+        override fun getItem(index: Int): Any {
+            return itemList.get(index)
+        }
 
-        //add button listenner
+        override fun getItemId(index: Int): Long {
+            return index.toLong()
+        }
 
-        return view
-    }
+        override fun getCount(): Int {
+            return itemList.size
+        }
 
-    override fun getItem(index: Int): Any {
-        return itemList.get(index)
-    }
-
-    override fun getItemId(index: Int): Long {
-        return index.toLong()
-    }
-
-    override fun getCount(): Int {
-        return itemList.size
-    }
-
-    private class ListRowHolder(row: View?) {
-        val label: TextView = row!!.findViewById<TextView>(R.id.show_textview) as TextView
+        private class ListRowHolder(row: View?) {
+            val label: TextView = row!!.findViewById<TextView>(R.id.show_textview) as TextView
+        }
     }
 }

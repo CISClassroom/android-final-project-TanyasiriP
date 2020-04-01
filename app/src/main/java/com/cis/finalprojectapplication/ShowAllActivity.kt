@@ -17,7 +17,7 @@ class ShowAllActivity : AppCompatActivity() {
     private val TAG:String = "Show Activity"
     lateinit var arrayAdapter: ArrayAdapter<*>
     var toDoItemList: MutableList<ToDo>? = null
-    lateinit var adapter: ToDoItemAdapter
+    lateinit var adapter: InstrumentAdapter.ToDoItemAdapter
     private var listViewItems: ListView? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -30,7 +30,7 @@ class ShowAllActivity : AppCompatActivity() {
         listViewItems = findViewById<View>(R.id.show_all_listview) as ListView
 
         toDoItemList = mutableListOf()
-        adapter = ToDoItemAdapter(this, toDoItemList!!)
+        adapter = InstrumentAdapter.ToDoItemAdapter(this, toDoItemList!!)
         listViewItems!!.setAdapter(adapter)
 
 

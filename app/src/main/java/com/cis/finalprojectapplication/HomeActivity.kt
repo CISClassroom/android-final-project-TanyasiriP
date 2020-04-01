@@ -36,7 +36,7 @@ class HomeActivity : AppCompatActivity() {
         }
 
         no_return_button.setOnClickListener{
-            startActivity(Intent(this@HomeActivity,AddToRentActivity::class.java))
+            //startActivity(Intent(this@HomeActivity,AddToRentActivity::class.java))
             Toast.makeText(this,"เครื่องดนตรีที่ยังไม่คืน",Toast.LENGTH_SHORT).show()
         }
 

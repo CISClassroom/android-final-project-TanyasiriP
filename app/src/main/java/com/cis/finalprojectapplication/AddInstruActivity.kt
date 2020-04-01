@@ -1,14 +1,24 @@
 package com.cis.finalprojectapplication
 
+import android.app.Activity
 import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.webkit.MimeTypeMap
 import android.widget.*
+import com.google.android.gms.auth.api.signin.internal.Storage
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.storage.FirebaseStorage
+import com.google.firebase.storage.StorageReference
+import com.google.firebase.storage.StorageTask
 import kotlinx.android.synthetic.main.activity_add_instru.*
 
 class AddInstruActivity : AppCompatActivity() {
+
+
 
     private  val TAG:String = "Add Instru Activity"
 
@@ -17,15 +27,28 @@ class AddInstruActivity : AppCompatActivity() {
     lateinit var  instr_save: Button
     lateinit var instr_type: Spinner
 
+    lateinit var select_photo_button: Button //
+    lateinit var select_photo_imageviwe: ImageView //
+    var mStorageRef: StorageReference? = null
+    private var uploadTask: StorageTask<*>? = null
+    var imguri: Uri? = null
+
     var valueofspinner = ""
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_add_instru)
 
+        mStorageRef = FirebaseStorage.getInstance().getReference("Images")
+        select_photo_button = findViewById<View>(R.id.select_photo_button) as Button //
+        select_photo_imageviwe = findViewById<View>(R.id.select_photo_imageviwe) as ImageView //
+
         instr_name = findViewById(R.id.instru_name) as EditText
         instr_detail = findViewById(R.id.instru_detail) as EditText
         instr_save = findViewById(R.id.save__instru_button) as Button
         instr_type = findViewById(R.id.type_instru_spinner) as Spinner
+
+        select_photo_button = findViewById(R.id.select_photo_button) as Button //
+        select_photo_imageviwe = findViewById(R.id.select_photo_imageviwe) as ImageView //
 
         val t = resources.getStringArray(R.array.type)
         val adapter = ArrayAdapter(this,android.R.layout.simple_dropdown_item_1line,t)
@@ -84,6 +107,17 @@ class AddInstruActivity : AppCompatActivity() {
             ref.child(instrumentId).setValue(select_instrument).addOnCompleteListener {
                 Toast.makeText(applicationContext,"บันทึกเครื่องดนตรีแล้ว", Toast.LENGTH_SHORT).show()
             }
+        }
+    }
+    override fun onActivityResult(
+        requestCode: Int,
+        resultCode: Int,
+        data: Intent?
+    ) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if (requestCode == 1 && resultCode == Activity.RESULT_OK && data != null && data.data != null) {
+            imguri = data.data
+            select_photo_imageviwe!!.setImageURI(imguri)
         }
     }
 
