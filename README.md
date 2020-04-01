@@ -1,0 +1,6 @@
+## Just an Instrument App
+
+### Can do ...
+- Login & Logout
+- Add & Delete
+- Uplode photo (coming soon) // maybe ...
