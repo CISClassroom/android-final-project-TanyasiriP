@@ -11,8 +11,8 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="283dp"
-        android:layout_height="160dp"
+        android:layout_width="334dp"
+        android:layout_height="162dp"
         app:srcCompat="@drawable/sax" />
 
     <TextView
@@ -20,17 +20,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:drawableTint="#FFFFFF"
-        android:text="เช่า-ยืมเครื่องดนตรี"
-        android:textColor="#000000"
-        android:textSize="20dp" />
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:drawableTint="#FFFFFF"
-        android:text="สำหรับเจ้าของกิจการ"
-        android:textColor="#000000"
+        android:text="Storage Song Application"
         android:textSize="15dp" />
 
     <Space
@@ -56,7 +46,8 @@
         <EditText
             android:id="@+id/email_login"
             android:layout_width="290dp"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:hint="E-mail Address"/>
     </LinearLayout>
 
     <LinearLayout
@@ -80,7 +71,8 @@
             android:layout_width="290dp"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="textPassword" />
+            android:hint="Password"
+            android:inputType="numberPassword" />
     </LinearLayout>
 
     <Space
@@ -91,7 +83,6 @@
         android:id="@+id/Button_login"
         android:layout_width="160dp"
         android:layout_height="40dp"
-        android:background="#FFFFFF"
         android:text="เข้าสู่ระบบ"
         android:textColor="#000000" />
 

@@ -1,13 +1,13 @@
 package com.cis.finalprojectapplication
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.ListView
+import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.database.*
 import kotlinx.android.synthetic.main.activity_show_all.*
 
@@ -39,6 +39,10 @@ class ShowAllActivity : AppCompatActivity() {
             val selectedItem = parent?.getItemAtPosition(position) as ToDo
             intent.putExtra("name",selectedItem.name)
             intent.putExtra("id",selectedItem.object_id)
+            startActivity(intent)
+        }
+        back_to_home.setOnClickListener{
+            val intent =  Intent(this@ShowAllActivity,HomeActivity::class.java)
             startActivity(intent)
         }
 

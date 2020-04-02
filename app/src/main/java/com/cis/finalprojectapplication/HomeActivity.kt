@@ -1,9 +1,9 @@
 package com.cis.finalprojectapplication
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_home.*
 
@@ -29,25 +29,14 @@ class HomeActivity : AppCompatActivity() {
                 finish()
             }
         }
-
-        return_button.setOnClickListener{
-            //startActivity(Intent(this@HomeActivity,ReturnActivity::class.java))
-            Toast.makeText(this,"เครื่องดนตรีที่คืนแล้ว", Toast.LENGTH_SHORT).show()
-        }
-
-        no_return_button.setOnClickListener{
-            //startActivity(Intent(this@HomeActivity,AddToRentActivity::class.java))
-            Toast.makeText(this,"เครื่องดนตรีที่ยังไม่คืน",Toast.LENGTH_SHORT).show()
-        }
-
         show_button.setOnClickListener{
             startActivity(Intent(this@HomeActivity,ShowAllActivity::class.java))
-            Toast.makeText(this,"เครื่องดนตรีทั้งหมด",Toast.LENGTH_SHORT).show()
+            Toast.makeText(this,"เนื้อเพลงทั้งหมด",Toast.LENGTH_SHORT).show()
         }
 
         add_button.setOnClickListener{
             startActivity(Intent(this@HomeActivity,AddInstruActivity::class.java))
-            Toast.makeText(this,"เพิ่มเครื่องดนตรี",Toast.LENGTH_SHORT).show()
+            Toast.makeText(this,"เพิ่มเนื้อเพลงใหม่",Toast.LENGTH_SHORT).show()
         }
 
         signout_button.setOnClickListener {

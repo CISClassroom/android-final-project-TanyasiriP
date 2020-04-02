@@ -1,10 +1,9 @@
 package com.cis.finalprojectapplication
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -29,26 +28,22 @@ class MainActivity : AppCompatActivity() {
 
             if (email.isEmpty()){
                 Toast.makeText(this,"กรุณากรอก E-mail", Toast.LENGTH_LONG).show()
-                Log.d(TAG,"Email was empty!")
                 return@setOnClickListener
             }
             if (password.isEmpty()){
                 Toast.makeText(this,"กรุณากรอกรหัสผ่าน", Toast.LENGTH_LONG).show()
-                Log.d(TAG,"Password was empty!")
                 return@setOnClickListener
             }
             mAuth!!.signInWithEmailAndPassword(email,password).addOnCompleteListener {
                     task ->
                 if (!task.isSuccessful){
                     if (password.length < 6 ){
-                        password_login.error = "รหัสผ่านไม่ถูกต้อง กรูณากรองรหัสผ่านใหม่อีกครั้ง"
-                        Log.d(TAG,"Enter password less than 6 characters")
+                        password_login.error = "รหัสผ่านน้อยกว่า 6 ตัวอักษร กรุณากรองรหัสผ่านใหม่อีกครั้ง"
                     }else{
                         Toast.makeText(this,"Autentication Failed"+task.exception, Toast.LENGTH_SHORT).show()
-                        Log.d(TAG,"Authentication Failed"+task.exception)
                     }
                 }else{
-                    Toast.makeText(this,"Sign in Successful", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this,"เข้าสู่ระบบสำเร็จ", Toast.LENGTH_SHORT).show()
                     startActivity(Intent(this@MainActivity,HomeActivity::class.java))
                     finish()
                 }

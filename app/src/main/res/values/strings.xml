@@ -1,12 +1,12 @@
 <resources>
     <string name="app_name">FinalProjectApplication</string>
     <string-array name="type">
-        <item>เครื่องสาย -ดีด-</item>
-        <item>เครื่องสาย -สี-</item>
-        <item>เครื่องตี</item>
-        <item>เครื่องเป่า</item>
+        <item>เพลงรัก</item>
+        <item>เพลงเศร้า</item>
+        <item>เพลงสนุก</item>
+        <item>เพลงเพื่อชีวิต</item>
+        <item>เพลงต่างชาติ</item>
     </string-array>
-
     <string-array name="items">
         <item>item1</item>
         <item>item2</item>

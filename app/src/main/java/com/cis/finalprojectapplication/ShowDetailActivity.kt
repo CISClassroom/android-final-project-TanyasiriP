@@ -1,9 +1,8 @@
 package com.cis.finalprojectapplication
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.database.*
 import kotlinx.android.synthetic.main.activity_show_detail.*
 
@@ -20,9 +19,9 @@ class ShowDetailActivity : AppCompatActivity() {
         mDatabase = FirebaseDatabase.getInstance().reference
         mDatabase.orderByKey().addListenerForSingleValueEvent(itemListener)
         var id = getIntent().getExtras()!!.getString("id")
-        edit_button.setOnClickListener {
-            val intent = Intent(this@ShowDetailActivity,AddInstruActivity::class.java)
-            Toast.makeText(this,"เพิ่มเครื่องดนตรีนี้ในการยืมแล้ว", Toast.LENGTH_SHORT).show()
+
+        back_to_all.setOnClickListener{
+            val intent =  Intent(this@ShowDetailActivity,ShowAllActivity::class.java)
             startActivity(intent)
         }
         delete_button.setOnClickListener {

@@ -8,95 +8,121 @@
     android:background="@drawable/wpandroid"
     tools:context=".AddInstruActivity">
 
-    <Space
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="30dp" />
+        android:layout_height="match_parent"
+        android:layout_margin="20dp">
 
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="10dp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
 
-    <TextView
-        android:id="@+id/textView7"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="เพิ่มเครื่องดนตรี"
-        android:textAlignment="center"
-        android:textColor="#000000"
-        android:textSize="15sp" />
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="30dp" />
 
-    <ImageView
-        android:id="@+id/select_photo_imageviwe"
-        android:layout_width="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_height="114dp"
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="เพิ่มเนื้อเพลงใหม่"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="20dp" />
 
-        app:srcCompat="@drawable/email" />
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
 
-    <Button
-        android:id="@+id/select_photo_button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="60dp"
-        android:layout_marginRight="60dp"
+            <EditText
+                android:id="@+id/instru_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:ems="10"
 
-        android:text="เพิ่มรูปภาพ" />
+                android:hint="ชื่อเพลง"
+                android:inputType="textPersonName"
+                android:textColor="#000000"
+                android:textSize="20dp" />
 
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="30dp" />
+            <EditText
+                android:id="@+id/instru_detail"
+                android:layout_width="match_parent"
+                android:layout_height="360dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:ems="10"
 
-    <EditText
-        android:id="@+id/instru_name"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:ems="10"
+                android:gravity="start|top"
+                android:hint="เนื้อเพลง และอื่นๆ"
+                android:inputType="textMultiLine"
+                android:textColor="#000000"
+                android:textSize="20dp" />
 
-        android:hint="Please enter name of instrument."
-        android:inputType="textPersonName"
-        android:textColor="#000000"
-        android:textSize="15sp" />
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="30dp" />
 
-    <EditText
-        android:id="@+id/instru_detail"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:ems="10"
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ประเภทเพลง"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="20dp" />
 
-        android:gravity="start|top"
-        android:hint="Please Enter detail about this instrument."
-        android:inputType="textMultiLine"
-        android:textColor="#000000"
-        android:textSize="18sp" />
+            <Spinner
+                android:id="@+id/type_instru_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="60dp"
+                android:layout_marginRight="60dp"
+                android:dropDownWidth="match_parent"
+                android:entries="@array/type"
+                android:textSize="20dp"
+                app:layout_constraintVertical_bias="0.0" />
 
-    <Spinner
-        android:id="@+id/type_instru_spinner"
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:layout_marginLeft="60dp"
-        android:layout_marginRight="60dp"
-        android:dropDownWidth="match_parent"
-        android:entries="@array/type"
-        app:layout_constraintVertical_bias="0.0" />
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
 
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="40dp" />
+            <ImageView
+                android:id="@+id/select_photo_imageviwe"
+                android:layout_width="match_parent"
+                android:layout_height="114dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
 
-    <Button
-        android:id="@+id/save__instru_button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="60dp"
-        android:layout_marginRight="60dp"
+                app:srcCompat="@drawable/photo" />
 
-        android:background="#B5EAD7"
-        android:text="บันทึก"
-        android:textSize="15sp" />
+            <Button
+                android:id="@+id/select_photo_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="60dp"
+                android:layout_marginRight="60dp"
+
+                android:text="เพิ่มรูปภาพ" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="30dp" />
+
+            <Button
+                android:id="@+id/save__instru_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="60dp"
+                android:layout_marginRight="60dp"
+
+                android:background="#B5EAD7"
+                android:text="บันทึก"
+                android:textSize="20dp" />
+        </LinearLayout>
+    </ScrollView>
 
 </LinearLayout>

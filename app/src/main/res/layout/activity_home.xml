@@ -37,27 +37,9 @@
         android:layout_width="match_parent"
         android:layout_height="30dp" />
 
-    <Button
-        android:id="@+id/return_button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:text="เครื่องดนตรีที่คืนแล้ว"
-        android:background="#C7CEEA" />
-
     <Space
         android:layout_width="match_parent"
         android:layout_height="30dp" />
-
-    <Button
-        android:id="@+id/no_return_button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:text="เครื่องดนตรีที่ยังไม่คืน"
-        android:background="#B5EAD7" />
 
     <Space
         android:layout_width="match_parent"
@@ -69,8 +51,9 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:text="เครื่องดนตรีทั้งหมด"
-        android:background="#E2F0CB" />
+        android:textSize="20dp"
+        android:background="#C7CEEA"
+        android:text="เนื้อเพลงทั้งหมด" />
 
     <Space
         android:layout_width="match_parent"
@@ -82,8 +65,9 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:text="เพิ่มเครื่องดนตรี"
-        android:background="#FFDAC1" />
+        android:textSize="20dp"
+        android:background="#E2F0CB"
+        android:text="เพิ่มเนื้อเพลงใหม่" />
 
     <Space
         android:layout_width="match_parent"
@@ -95,6 +79,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
+        android:textSize="20dp"
         android:text="ออกจากระบบ"
         android:background="#FF9AA2"/>
 </LinearLayout>
