@@ -2,6 +2,7 @@ package com.cis.finalprojectapplication
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.database.*
 import kotlinx.android.synthetic.main.activity_show_detail.*
@@ -27,6 +28,7 @@ class ShowDetailActivity : AppCompatActivity() {
         delete_button.setOnClickListener {
             mDatabase.child("instruments").child(id!!).removeValue()
             val intent = Intent(this,ShowAllActivity::class.java)
+            Toast.makeText(this,"เนื้อเพลงถูกลบออกแล้ว", Toast.LENGTH_SHORT).show()
             startActivity(intent)
             finish()
         }
