@@ -4,12 +4,10 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.*
+import android.widget.BaseAdapter
+import android.widget.TextView
 
-class InstrumentAdapter(val mCtx: Context,val layoutShowId:Int,val instrlist:List<Instrument>)
-    :ArrayAdapter<Instrument>(mCtx,layoutShowId,instrlist) {
-
-    class ToDoItemAdapter(context: Context, toDoItemList: MutableList<ToDo>) : BaseAdapter() {
+class InstrumentAdapter(context: Context, toDoItemList: MutableList<ToDo>) : BaseAdapter() {
 
         private val mInflater: LayoutInflater = LayoutInflater.from(context)
         private var itemList = toDoItemList
@@ -55,4 +53,3 @@ class InstrumentAdapter(val mCtx: Context,val layoutShowId:Int,val instrlist:Lis
             val label: TextView = row!!.findViewById<TextView>(R.id.show_textview) as TextView
         }
     }
-}
